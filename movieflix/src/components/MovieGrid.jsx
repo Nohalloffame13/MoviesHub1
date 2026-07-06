@@ -1,8 +1,7 @@
 import movies from "../data/movies";
 import MovieCard from "./MovieCard";
-import "./MovieGrid.css";
 
-export default function MovieGrid(){
+export default function MovieGrid({ onPlay }) {
 
 return(
 
@@ -19,6 +18,7 @@ movies.map(movie=>
 <MovieCard
 key={movie.id}
 movie={movie}
+onPlay={onPlay}
 />
 
 )
