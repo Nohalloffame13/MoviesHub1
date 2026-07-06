@@ -1,22 +1,38 @@
-export default function MovieCard({ movie, onOpen }) {
-    return (
-        <div
-              onClick={() => onOpen(movie)}
-                    style={{
-                            width: 180,
-                                    cursor: "pointer"
-                                          }}
-                                              >
-                                                    <img
-                                                            src={movie.poster}
-                                                                    style={{
-                                                                              width: "100%",
-                                                                                        borderRadius: 10
-                                                                                                }}
-                                                                                                      />
+import { FaPlay } from "react-icons/fa";
 
-                                                                                                            <h3>{movie.title}</h3>
-                                                                                                                </div>
-                                                                                                                  );
-                                                                                                                  }
+export default function MovieCard({movie}){
+
+return(
+
+<div className="movie-card">
+
+<img
+src={movie.poster}
+alt={movie.title}
+/>
+
+<div className="movie-info">
+
+<h3>{movie.title}</h3>
+
+<p>{movie.category}</p>
+
+<div className="bottom">
+
+<span>⭐ {movie.rating}</span>
+
+<button>
+
+<FaPlay/>
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+)
+
 }
