@@ -7,6 +7,7 @@ import movies from "./data";
 import MovieCard from "./components/MovieCard";
 import Player from "./components/Player";
 import "./components/Navbar.css";
+import "./components/Hero.css";
 
 function App() {
   return (
