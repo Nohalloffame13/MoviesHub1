@@ -6,6 +6,7 @@ import { useState } from "react";
 import movies from "./data";
 import MovieCard from "./components/MovieCard";
 import Player from "./components/Player";
+import "./components/Navbar.css";
 
 function App() {
   return (
