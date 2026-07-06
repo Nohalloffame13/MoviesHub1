@@ -1,7 +1,22 @@
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import MovieGrid from "./components/MovieGrid";
+import Footer from "./components/Footer";
 import { useState } from "react";
 import movies from "./data";
 import MovieCard from "./components/MovieCard";
 import Player from "./components/Player";
+
+function App() {
+  return (
+    <>
+      <Navbar />
+      <Hero />
+      <MovieGrid />
+      <Footer />
+    </>
+  );
+}
 
 export default function App() {
 
