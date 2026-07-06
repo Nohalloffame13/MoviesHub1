@@ -8,6 +8,7 @@ import MovieCard from "./components/MovieCard";
 import Player from "./components/Player";
 import "./components/Navbar.css";
 import "./components/Hero.css";
+import "./components/MovieGrid.css";
 
 function App() {
   return (
