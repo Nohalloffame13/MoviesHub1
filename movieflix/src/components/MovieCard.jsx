@@ -1,10 +1,13 @@
 import { FaPlay } from "react-icons/fa";
 
-export default function MovieCard({movie}){
+export default function MovieCard({ movie, onPlay }) {
 
 return(
 
-<div className="movie-card">
+<div
+className="movie-card"
+onClick={()=>onPlay(movie)}
+>
 
 <img
 src={movie.poster}
