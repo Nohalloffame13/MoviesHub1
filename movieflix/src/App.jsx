@@ -1,56 +1,38 @@
+import { useState } from "react";
+
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import MovieGrid from "./components/MovieGrid";
 import Footer from "./components/Footer";
-import { useState } from "react";
-import movies from "./data";
-import MovieCard from "./components/MovieCard";
-import Player from "./components/Player";
-import "./components/Navbar.css";
-import "./components/Hero.css";
-import "./components/MovieGrid.css";
+import PlayerModal from "./components/PlayerModal";
 
-function App() {
-  return (
-    <>
-      <Navbar />
-      <Hero />
-      <MovieGrid />
-      <Footer />
-    </>
-  );
-}
+function App(){
 
-export default function App() {
+const [movie,setMovie]=useState(null);
 
-const [selected, setSelected] = useState(null);
+return(
 
-return (
+<>
 
-<div style={{padding:20}}>
+<Navbar/>
 
-<h1>My Movies</h1>
+<Hero/>
 
-<div style={{
-display:"flex",
-gap:20,
-flexWrap:"wrap"
-}}>
-
-{movies.map(movie=>(
-<MovieCard
-key={movie.id}
-movie={movie}
-onOpen={setSelected}
+<MovieGrid
+onPlay={setMovie}
 />
-))}
 
-</div>
+<PlayerModal
+movie={movie}
+onClose={()=>setMovie(null)}
+/>
 
-<Player movie={selected}/>
+<Footer/>
 
-</div>
+</>
 
-);
+)
 
 }
+
+export default App;
